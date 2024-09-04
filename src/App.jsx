@@ -2,10 +2,11 @@ import { Admin, ListGuesser, Resource } from "react-admin";
 import { dataProvider } from "./providers/dataProvider";
 
 // import HseList from './pages/hse/hseList'
-import createHSE from "./pages/hse/createHSE";
+// import createHSE from "./pages/hse/createHSE";
 import PostList from "./pages/posts/PostList";
 
 import "./App.css";
+
 
 function App() {
   // console.log(dataProvider)
