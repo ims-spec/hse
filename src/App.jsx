@@ -4,8 +4,10 @@ import { dataProvider } from "./providers/dataProvider";
 // import HseList from './pages/hse/hseList'
 // import createHSE from "./pages/hse/createHSE";
 import PostList from "./pages/posts/PostList";
+import PosterList from "./pages/posts/PosterList";
 
 import "./App.css";
+import CreatePost from "./pages/posts/CreatePost";
 
 
 function App() {
@@ -18,7 +20,8 @@ function App() {
       {/* <Resource
         name="hse"
         list={ListGuesser} /> */}
-      <Resource name="posts" list={PostList} />
+      <Resource name="posts" list={PostList} create={CreatePost}/>
+      <Resource name="posters" list={PosterList} />
       {/* <Resource source="divisions" list="divisionsList" />
       <Resource source="employees" list="employeesList" />
       <Resource source="title_jobs" list="titleJobsList" />
