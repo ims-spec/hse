@@ -1,4 +1,4 @@
-import { Admin, Create, CustomRoutes, ListGuesser, Resource } from "react-admin";
+import { Admin, CustomRoutes, ListGuesser, Resource } from "react-admin";
 import { dataProvider } from "./providers/dataProvider";
 import { Route } from "react-router-dom";
 
@@ -21,6 +21,11 @@ import MyLayout from "./MyLayout";
 //icons
 // import BookIcon from "@material-ui/icons/Book";
 import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
+import GroupsIcon from '@mui/icons-material/Groups';
+import TurnedInNotOutlinedIcon from '@mui/icons-material/TurnedInNotOutlined';
+
+
+
 //styles
 import "./App.css";
 
@@ -42,8 +47,22 @@ function App() {
         create={CreatePost}
         icon={LocalPostOfficeIcon} />
       
-      <Resource name="posters" list={PosterList} create={CreatePoster}/>      
-      {/* <Resource name="posters" list={ListGuesser} create={CreatePoster} />   */}
+      <Resource
+        name="posters"
+        list={PosterList}
+        create={CreatePoster}
+        icon={TurnedInNotOutlinedIcon} />  
+      
+      <Resource
+        name="groups"
+        list={ListGuesser}
+        // create={Create}
+        icon={GroupsIcon}
+        // edit={}
+        // show={ListGuesser}
+      />
+
+
       <CustomRoutes>
         <Route path="settings" element={<Settings/> } />
         <Route path="profile" element={<Profile/> } />
