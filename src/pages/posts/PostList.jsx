@@ -10,10 +10,7 @@ export default function PostList() {
           <Datagrid>
               <TextField source="id" />
               <TextField source="post"/>
-              <DateField source="published_at"/>              
-
-
-
+              <DateField source="published_at"/>
         </Datagrid>
       </MyList>
   )
