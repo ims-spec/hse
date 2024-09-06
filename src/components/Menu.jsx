@@ -20,9 +20,9 @@ export default function MainMenu() {
         <Menu.ResourceItem name="groups" />
           </Submenu>
           <Divider />
-      <Submenu text="Группы" icon={<GroupsIcon />}>
+      {/* <Submenu text="Группы" icon={<GroupsIcon />}>
         <Menu.ResourceItem name="groups" />
-      </Submenu>
+      </Submenu> */}
     </Menu>
   );
 }

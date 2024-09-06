@@ -10,6 +10,7 @@ import PosterList from "./pages/posts/PosterList";
 import CreatePost from "./pages/posts/CreatePost";
 import Dashboard from "./pages/dashboard/Dashboard";
 import CreatePoster from "./pages/posts/CreatePoster";
+import CreateGroups from "./pages/admin/CreateGroups";
 
 //Routes
 import Settings from "./routePages/Settings";
@@ -20,11 +21,9 @@ import MyLayout from "./MyLayout";
 
 //icons
 // import BookIcon from "@material-ui/icons/Book";
-import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
-import GroupsIcon from '@mui/icons-material/Groups';
-import TurnedInNotOutlinedIcon from '@mui/icons-material/TurnedInNotOutlined';
-
-
+import LocalPostOfficeIcon from "@mui/icons-material/LocalPostOffice";
+import GroupsIcon from "@mui/icons-material/Groups";
+import TurnedInNotOutlinedIcon from "@mui/icons-material/TurnedInNotOutlined";
 
 //styles
 import "./App.css";
@@ -37,22 +36,22 @@ function App() {
       dashboard={Dashboard}
       // authProvider={}
       layout={MyLayout}
-      
     >
-      
       {/* <Resource name="posts" list={PostList} create={CreatePost}/> */}
       <Resource
         name="posts"
         list={PostList}
         create={CreatePost}
-        icon={LocalPostOfficeIcon} />
-      
+        icon={LocalPostOfficeIcon}
+      />
+
       <Resource
         name="posters"
         list={PosterList}
         create={CreatePoster}
-        icon={TurnedInNotOutlinedIcon} />  
-      
+        icon={TurnedInNotOutlinedIcon}
+      />
+
       <Resource
         name="groups"
         list={ListGuesser}
@@ -62,10 +61,18 @@ function App() {
         // show={ListGuesser}
       />
 
+      <Resource
+        name="groups"
+        list={ListGuesser}
+        create={CreateGroups}
+        icon={GroupsIcon}
+        // edit={}
+        // show={ListGuesser}
+      />
 
       <CustomRoutes>
-        <Route path="settings" element={<Settings/> } />
-        <Route path="profile" element={<Profile/> } />
+        <Route path="settings" element={<Settings />} />
+        <Route path="profile" element={<Profile />} />
       </CustomRoutes>
     </Admin>
   );
